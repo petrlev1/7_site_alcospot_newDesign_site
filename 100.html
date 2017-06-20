@@ -14,7 +14,7 @@
 <script type='text/javascript' src='js/jquery.floatThead.min.js'></script>
 
 <script>
-      $(document).ready(function () {
+$(document).ready(function () {
 
         var docHeight = $(window).height();
         var footerHeight = $('footer').height();
@@ -24,7 +24,11 @@
             $('footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
         }
     });
-        </script>
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
 
 </head>
 
@@ -35,7 +39,7 @@
 <div class="row headRowUp">
 <div class="container">
 <div class="col-md-4 colLogo">
-  <div class="logo"><a href="#"><img src="css/Images/logo.svg"></a></div>
+  <div class="logo"><a href="#"><img src="css/Images/logo.svg"></a><span class="version">v‌2.7.11</span></div>
   </div>
   <div class="col-md-8 headLine"><div class="headTel">8 (499) 653-61-43</div>
     <div class="headProblemBut"><a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span>Сообщить о проблеме</a></div>
@@ -102,7 +106,15 @@
         <a href="#">Помощь</a><a href="#">Контакты</a>
         
   </div>
-  <div class="nav1ChangeOrg"><strong>ЦентрИКТ (ООО Центр ИКТ КПП 772501001)</strong> <a href="#">Выбрать другую организацию <span class="glyphicon glyphicon-share"></span></a></div>
+  <div class="nav1ChangeOrg">
+<span class="nav1ChangeOrgLink">ЦентрИКТ (ООО Центр ИКТ КПП 772501001)<span class="glyphicon glyphicon-chevron-down"></span>
+<ul>
+<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
+<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
+<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
+</ul>
+</span><span class="linkBut subLinks1"><a href="#">Выбрать другую организацию</a></span>
+</div>
 </div>
   
 </header>
@@ -112,6 +124,8 @@
     
     <div class="col-md-8"><h1>Входящие товарно-транспортные накладные</h1></div>
     <div class="col-md-4" style="text-align:right"><div class="expUserItem"><a href="#"><span class="glyphicon glyphicon-wrench"></span>Режим опытного пользователя</a></div></div>
+    <div class="col-md-12 descText">Товарно-транспортная накладная (ТТН) предназначена для учёта движения товарно-материальных ценностей (ТМЦ) при их перемещении с участием транспортных средств и является основанием для списания ТМЦ у грузоотправителя и оприходования их у грузополучателя. Как правило, оформляется грузоотправителем. Однако по согласованию сторон документ может составляться и перевозчиком.<br>
+Некоторые организации используют ТТН для списания/оприходования товарно-материальных ценностей (вместо товарной накладной ТОРГ-12).</div>
   </div>
   
     <div class="toolPanel1">
@@ -150,50 +164,49 @@
             </thead>
             <tbody>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="statSuccess">Перемещено</div></td>
-                <td><div class="statSuccess">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="statSuccess" value="Перемещено"></td>
+                <td><input type="button" class="statSuccess" value="ТТН принята полностью в ЕГАИС"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
              <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="statError">Ошибка</div></td>
-                <td><div class="statError">Отклонена полностью</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="statError" value="Ошибка"></td>
+                <td><input type="button" class="statError" value="Отклонена полностью"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="statBlue">Отправить</div></td>
-                <td><div class="statBlue">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="statBlue" value="Отправить"></td>
+                <td><input type="button" class="statBlue" value="ТТН принята полностью в ЕГАИС"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">Не проверялась</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
               <tr>
-                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><div class="status1">Перемещено</div></td>
-                <td><div class="status1">ТТН принята полностью в ЕГАИС</div></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
+                <td><input name="" type="checkbox" value="" class="table1Check"></td><td>2009636106</td><td>04.05.2017</td><td>0</td><td>0</td><td><input type="button" class="status1" value="Перемещено"></td>
+                <td><input type="button" class="status1" value="Не проверялась"></td><td>2009636106</td><td><a href="#" class="table1ButList"></a><a href="#" class="table1ButDel"></a></td>
               </tr>
-               
             </tbody>
       </table>
     </div>

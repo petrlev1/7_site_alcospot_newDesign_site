@@ -1,6 +1,9 @@
 @charset "utf-8";
 * {margin:0; padding:0}
 body { font-family:Verdana, Geneva, sans-serif; color: #4D4D4D; overflow-x: hidden; }
+
+.container {}
+
 	a { color: #2185C5; text-decoration:none; transition: all ease-out 0.3s;
         &:visited {color: #2185C5;}
         &:hover { color: #6EC9EF; text-decoration:none; }
@@ -21,13 +24,29 @@ header {
     a { color: #80D6FF;} }
 .headLogin { display: inline-block; position: absolute; right: 0; color: #fff; margin: 23px 0 0 0; }
 
+.version {
+    color: lightgrey;
+    font-size: x-small;
+    display: inline-block
+}
+
 .nav1 { margin: 15px 0 10px 0;
 	a { display: inline-block; position: relative; font-size: 1.2em; padding: 10px 15px; border-radius: 5px;
         &:hover { background-color: #f4f4f4 }} 
 	}
 
-.nav1ChangeOrg { display: block; font-size: 1em !important; padding: 5px 20px 20px 15px;
+.nav1ChangeOrg { display: block; position: relative; font-size: 1em !important; text-align: right; padding: 5px 20px 15px 15px;
     a { display: inline-block; margin: 0 10px 0 0; }}
+
+.nav1ChangeOrgLink { position: relative; display: inline-block; color: #2185C5; cursor: pointer; border: 1px #daeffa solid; padding: 5px 0 5px 5px; margin: 0 0 5px 0;
+    span { margin: 0 5px 0 5px }
+    ul { display: none; position: absolute; font-size: 0.9em; left: 0; right: 0; text-align: left; padding: 5px; background-color: #ffffff; box-shadow: 0 5px 10px rgba(0,0,0,0.2); z-index: 1;
+        a { display: block; padding: 10px; border-radius: 5px;
+            &:hover {background-color: #f4f4f4 }}
+    }
+    &:hover ul { display: block }
+
+}
 
 .nav1SubMenuHover { display: inline-block;
       &:hover .nav1SubMenu { display: block; max-height: 1000px; transition: all ease-out 0.5s; }
@@ -42,7 +61,9 @@ header {
 
 .nav1SubMenu .container { padding: 20px; }
 
-h1 { font-size: 2em; color: #0774B5; margin: 30px 0; }
+h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
+
+.descText { margin: 0 0 20px 0 }
 
 .expUserItem { display: inline-block; margin: 0 0 10px 0;
     a {display: inline-block; border: 1px #75C4EA solid; padding: 5px 10px; border-radius: 5px; }
@@ -100,7 +121,7 @@ h1 { font-size: 2em; color: #0774B5; margin: 30px 0; }
 .table1ButDel { @extend .table1But; background-image: url(Images/ButDel.svg); }
 .table1ButList { @extend .table1But; background-image: url(Images/ButList.svg); }
 
-.status1 { font-size: 0.9em; color: #ffffff; background-color: #777777; border-radius: 4px; text-align: center; padding: 2px; }
+.status1 { display: block; width: 100%; font-size: 0.9em; color: #ffffff; background-color: #777777; border-radius: 4px; text-align: center; padding: 2px; border: none; }
 
 .statSuccess { @extend .status1; background-color: #5CBA5B; }
 .statError { @extend .status1; background-color: #c9302c; }

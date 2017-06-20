@@ -58,6 +58,11 @@ header {
   color: #fff;
   margin: 23px 0 0 0; }
 
+.version {
+  color: lightgrey;
+  font-size: x-small;
+  display: inline-block; }
+
 .nav1 {
   margin: 15px 0 10px 0; }
   .nav1 a {
@@ -71,11 +76,43 @@ header {
 
 .nav1ChangeOrg {
   display: block;
+  position: relative;
   font-size: 1em !important;
-  padding: 5px 20px 20px 15px; }
+  text-align: right;
+  padding: 5px 20px 15px 15px; }
   .nav1ChangeOrg a {
     display: inline-block;
     margin: 0 10px 0 0; }
+
+.nav1ChangeOrgLink {
+  position: relative;
+  display: inline-block;
+  color: #2185C5;
+  cursor: pointer;
+  border: 1px #daeffa solid;
+  padding: 5px 0 5px 5px;
+  margin: 0 0 5px 0; }
+  .nav1ChangeOrgLink span {
+    margin: 0 5px 0 5px; }
+  .nav1ChangeOrgLink ul {
+    display: none;
+    position: absolute;
+    font-size: 0.9em;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+    .nav1ChangeOrgLink ul a {
+      display: block;
+      padding: 10px;
+      border-radius: 5px; }
+      .nav1ChangeOrgLink ul a:hover {
+        background-color: #f4f4f4; }
+  .nav1ChangeOrgLink:hover ul {
+    display: block; }
 
 .nav1SubMenuHover {
   display: inline-block; }
@@ -113,7 +150,11 @@ header {
 h1 {
   font-size: 2em;
   color: #0774B5;
-  margin: 30px 0; }
+  margin: 30px 0 20px 0;
+  padding: 0; }
+
+.descText {
+  margin: 0 0 20px 0; }
 
 .expUserItem {
   display: inline-block;
@@ -231,12 +272,15 @@ h1 {
   background-image: url(Images/ButList.svg); }
 
 .status1, .statSuccess, .statError, .statBlue {
+  display: block;
+  width: 100%;
   font-size: 0.9em;
   color: #ffffff;
   background-color: #777777;
   border-radius: 4px;
   text-align: center;
-  padding: 2px; }
+  padding: 2px;
+  border: none; }
 
 .statSuccess {
   background-color: #5CBA5B; }
