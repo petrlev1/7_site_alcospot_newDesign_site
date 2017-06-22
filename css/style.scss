@@ -31,11 +31,11 @@ header {
 }
 
 .nav1 { margin: 15px 0 10px 0;
-	a { display: inline-block; position: relative; font-size: 1.2em; padding: 10px 15px; border-radius: 5px;
+	a { display: inline-block; position: relative; font-size: 1.2em; padding: 15px 15px; border-radius: 5px;
         &:hover { background-color: #f4f4f4 }} 
 	}
 
-.nav1ChangeOrg { display: block; position: relative; font-size: 1em !important; text-align: right; padding: 5px 20px 15px 15px;
+.nav1ChangeOrg { display: block; position: relative; font-size: 1em !important; margin: 15px 0 5px 0;
     a { display: inline-block; margin: 0 10px 0 0; }}
 
 .nav1ChangeOrgLink { position: relative; display: inline-block; color: #2185C5; cursor: pointer; border: 1px #daeffa solid; padding: 5px 0 5px 5px; margin: 0 0 5px 0;
@@ -49,14 +49,13 @@ header {
 }
 
 .nav1SubMenuHover { display: inline-block;
-      &:hover .nav1SubMenu { display: block; max-height: 1000px; transition: all ease-out 0.5s; }
+      &:hover .nav1SubMenu { max-height: 1000px; transition: all ease-out 0.5s; }
 }
 
 .nav1SubItem { display: inline-block; padding-right: 30px !important; background: url(Images/nav1SubItem.svg) center right 12px no-repeat; }
 
-.nav1SubMenu { display: block; position: absolute; left: 0; right: 0; max-height: 0; overflow: hidden; padding: 0; margin: auto; background-color: #ffffff; box-shadow: 0 5px 10px rgba(0,0,0,0.2); z-index: 1;
-    ul { font-size: 1.1em; }
-    li { font-size: 0.8em; list-style: none }
+.nav1SubMenu { display: block; position: absolute; min-width: 300px; max-height: 0; overflow: hidden; padding: 0; margin: auto; background-color: #ffffff; box-shadow: 0 5px 10px rgba(0,0,0,0.2); z-index: 1;
+    a { display: block; font-size: 1.2em; padding: 15px; }
 }
 
 .nav1SubMenu .container { padding: 20px; }
@@ -345,6 +344,12 @@ footer {
     .headProblemBut { margin: 5px 10px; }
     
     .headLogin { position: relative; margin: 15px 15px;  }
+    
+    .nav1 { 
+	a { display: block; } 
+	}
+    
+    .nav1SubMenuHover { display: block; }
     
     .toolPanel1 { 
         .col-md-8 { border-right: none; }

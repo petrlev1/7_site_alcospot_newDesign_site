@@ -69,7 +69,7 @@ header {
     display: inline-block;
     position: relative;
     font-size: 1.2em;
-    padding: 10px 15px;
+    padding: 15px 15px;
     border-radius: 5px; }
     .nav1 a:hover {
       background-color: #f4f4f4; }
@@ -78,8 +78,7 @@ header {
   display: block;
   position: relative;
   font-size: 1em !important;
-  text-align: right;
-  padding: 5px 20px 15px 15px; }
+  margin: 15px 0 5px 0; }
   .nav1ChangeOrg a {
     display: inline-block;
     margin: 0 10px 0 0; }
@@ -117,7 +116,6 @@ header {
 .nav1SubMenuHover {
   display: inline-block; }
   .nav1SubMenuHover:hover .nav1SubMenu {
-    display: block;
     max-height: 1000px;
     transition: all ease-out 0.5s; }
 
@@ -129,8 +127,7 @@ header {
 .nav1SubMenu {
   display: block;
   position: absolute;
-  left: 0;
-  right: 0;
+  min-width: 300px;
   max-height: 0;
   overflow: hidden;
   padding: 0;
@@ -138,11 +135,10 @@ header {
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 1; }
-  .nav1SubMenu ul {
-    font-size: 1.1em; }
-  .nav1SubMenu li {
-    font-size: 0.8em;
-    list-style: none; }
+  .nav1SubMenu a {
+    display: block;
+    font-size: 1.2em;
+    padding: 15px; }
 
 .nav1SubMenu .container {
   padding: 20px; }
@@ -531,6 +527,12 @@ footer {
   .headLogin {
     position: relative;
     margin: 15px 15px; }
+
+  .nav1 a {
+    display: block; }
+
+  .nav1SubMenuHover {
+    display: block; }
 
   .toolPanel1 .col-md-8 {
     border-right: none; }

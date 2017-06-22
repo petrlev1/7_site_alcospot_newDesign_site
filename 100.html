@@ -49,6 +49,9 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     </div>
     </div>
 <div class="container">
+
+<div class="col-md-9">
+
       <div class="nav1" id="mainmenu">
 
 
@@ -58,84 +61,74 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <div class="nav1SubMenuHover">
         <a href="/Home/Operator" class="nav1SubItem">Административные функции</a>
         <div class="nav1SubMenu">
-            <div class="container">
-                <div class="col-md-4"><ul><a href="/User">Пользователи</a></ul></div>
-                <div class="col-md-4"><ul><a href="/Organisation">Организации</a></ul></div>
-                <div class="col-md-4"><ul><a href="/RetailNetwork">Торговые сети</a></ul></div>
-            </div>
+           
+                <a href="/User">Пользователи</a>
+                <a href="/Organisation">Организации</a>
+                <a href="/RetailNetwork">Торговые сети</a>
+            
         </div>
     </div>
 
 <div class="nav1SubMenuHover">
     <a href="/StockRests" class="nav1SubItem">Склад</a>
     <div class="nav1SubMenu">
-        <div class="container">
-            <div class="col-md-3"><ul><a href="/StockRests">Склад</a></ul></div>
-            <div class="col-md-3"><ul><a href="/ActWriteOffStock">Акты списания продукции</a></ul>
-            </div>
-            <div class="col-md-3"><ul><a href="/ActChargeOnStock">Акты постановки на баланс</a></ul>
-            </div>
-            <div class="col-md-3"><ul><a href="/ActTransferToShop">Акты перемещения продукции</a></ul>
-            </div>
-        </div>
+            <a href="/StockRests">Склад</a>
+            <a href="/ActWriteOffStock">Акты списания продукции</a>
+            <a href="/ActChargeOnStock">Акты постановки на баланс</a>
+            <a href="/ActTransferToShop">Акты перемещения продукции</a>
     </div>
-</div>
-<div class="nav1SubMenuHover">
+    </div>
+    
+    <div class="nav1SubMenuHover">
     <a href="/ShopRests" class="nav1SubItem">Торговый зал</a>
     <div class="nav1SubMenu">
-        <div class="container">
-            <div class="col-md-3" style="width:20%"><ul><a href="/ShopRests">Торговый зал</a></ul></div>
-            <div class="col-md-3" style="width:20%"><ul><a href="/ActWriteOffShop">Акты списания продукции</a></ul>
+       
+            <a href="/ShopRests">Торговый зал</a>
+            <a href="/ActWriteOffShop">Акты списания продукции</a>
+            <a href="/ActChargeOnShop">Акты постановки на баланс</a>
+            <a href="/ActTransferToStock">Акты перемещения продукции</a>
+            <a href="/Inventory">Инвентаризация</a>
+            
             </div>
-            <div class="col-md-3" style="width:20%"><ul><a href="/ActChargeOnShop">Акты постановки на баланс</a></ul>
-            </div>
-            <div class="col-md-3" style="width:20%"><ul><a href="/ActTransferToStock">Акты перемещения продукции</a></ul>
-            </div>
-            <div class="col-md-3" style="width:20%"><ul><a href="/Inventory">Инвентаризация</a></ul>
-            </div>
-        </div>
     </div>
-</div>
+
 <div class="nav1SubMenuHover">
     <a href="/IncomingWayBill/Index/All" class="nav1SubItem">Накладные</a>
     <div class="nav1SubMenu">
-        <div class="container">
-            <div class="col-md-6">
-                <ul>
-                    <a href="/IncomingWayBill/Index/All">Входящие товаро-транспортные накладные</a>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul>
-                    <a href="/OutgoingWayBill/Index/All">Исходящие товаро-транспортные накладные</a>
-                </ul>
-            </div>
-        </div>
+        
+            <a href="/IncomingWayBill/Index/All">Входящие товаро-транспортные накладные</a>
+            <a href="/OutgoingWayBill/Index/All">Исходящие товаро-транспортные накладные</a>
+        
     </div>
 </div>
 
 <a href="/Declaration/Simple">Декларации</a>    <div class="nav1SubMenuHover">
         <a href="/Reports" class="nav1SubItem"> Отчеты и выгрузка</a>
         <div class="nav1SubMenu">
-            <div class="container">
-                <div class="col-md-7"></div>
-                <div class="col-md-2"><ul><a href="/Reports?mode=Reports">Отчеты</a> </ul> </div>
-                <div class="col-md-3"><ul><a href="/Reports?mode=Exports">Выгрузка данных</a></ul></div>
-            </div>
+            
+                <a href="/Reports?mode=Reports">Отчеты</a>
+                <a href="/Reports?mode=Exports">Выгрузка данных</a>
+            
         </div>
     </div>
 <a href="/Utm">Управление</a>
+    
+</div>
 
-        
+</div>
 
-                    <div class="nav1ChangeOrg">
-                <span class="nav1ChangeOrgLink">ООО Центр ИКТ, КПП 772501001<span class="glyphicon glyphicon-chevron-down"></span>
+<div class="col-md-3">
+            
+           <div class="nav1ChangeOrg">
+                <span class="nav1ChangeOrgLink"><nobr>ООО Центр ИКТ, КПП 772501001<span class="glyphicon glyphicon-chevron-down"></span></nobr>
                 <ul>
                     <a href="/Organisation/ClearCurrentOrganisation">Выйти из организации</a>
                 </ul>
-                </span><span class="linkBut subLinks1"><a href="/Subdivision/ChooseSubdivision">Выбрать другое подразделение <span class="glyphicon glyphicon-share"></span></a></span>
-
+                </span><span class="linkBut subLinks1"><a href="/Subdivision/ChooseSubdivision"><nobr>Выбрать другое подразделение <span class="glyphicon glyphicon-share"></span></nobr></a></span>
             </div>
+            
+</div>
+                  
     </div>
   
 </div>
