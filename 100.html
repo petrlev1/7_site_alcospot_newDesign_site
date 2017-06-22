@@ -49,74 +49,95 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     </div>
     </div>
 <div class="container">
-      <div class="nav1">
-        <a href="#">Главная</a>
-        
-        <div class="nav1SubMenuHover">
-        <a href="#" class="nav1SubItem">Склад</a>
+      <div class="nav1" id="mainmenu">
+
+
+<a href="/Home/Operator">Главная</a>
+
+
+    <div class="nav1SubMenuHover">
+        <a href="/Home/Operator" class="nav1SubItem">Административные функции</a>
         <div class="nav1SubMenu">
+            <div class="container">
+                <div class="col-md-4"><ul><a href="/User">Пользователи</a></ul></div>
+                <div class="col-md-4"><ul><a href="/Organisation">Организации</a></ul></div>
+                <div class="col-md-4"><ul><a href="/RetailNetwork">Торговые сети</a></ul></div>
+            </div>
+        </div>
+    </div>
+
+<div class="nav1SubMenuHover">
+    <a href="/StockRests" class="nav1SubItem">Склад</a>
+    <div class="nav1SubMenu">
         <div class="container">
-        <div class="col-md-4"><ul><a href="#">Акт списания продукции</a></ul></div>
-        <div class="col-md-4"><ul><a href="#">Акт постановки на баланс</a></ul></div>
-        <div class="col-md-4"><ul><a href="#">Акт перемещения продукции</a></ul></div>
+            <div class="col-md-3"><ul><a href="/StockRests">Склад</a></ul></div>
+            <div class="col-md-3"><ul><a href="/ActWriteOffStock">Акты списания продукции</a></ul>
+            </div>
+            <div class="col-md-3"><ul><a href="/ActChargeOnStock">Акты постановки на баланс</a></ul>
+            </div>
+            <div class="col-md-3"><ul><a href="/ActTransferToShop">Акты перемещения продукции</a></ul>
+            </div>
         </div>
-        </div>
-        </div>
- 
-        <div class="nav1SubMenuHover">
-        <a href="#" class="nav1SubItem">Торговый зал</a>
-        <div class="nav1SubMenu">
-        <div class="container">
-        <div class="col-md-2"></div>
-        <div class="col-md-3"><ul><a href="#">Торговый зал</a></ul></div>
-         <div class="col-md-7"><ul><a href="#">Инвентаризация</a></ul></div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="nav1SubMenuHover">
-        <a href="#" class="nav1SubItem">Накладные</a>
-        <div class="nav1SubMenu">
-        <div class="container">
-        <div class="col-md-6">
-        <ul>
-          <a href="#">Входящие товаро-транспортные накладные</a>
-        </ul>
-        </div>
-        <div class="col-md-6">
-        <ul>
-          <a href="#">Исходящие товаро-транспортные накладные</a>
-        </ul>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <a href="#">Декларации</a>
-        
-        <div class="nav1SubMenuHover">
-        <a href="#" class="nav1SubItem">Отчеты и выгрузка</a>
-        <div class="nav1SubMenu">
-        <div class="container">
-        <div class="col-md-7"></div>
-        <div class="col-md-2"><ul><a href="#">Отчеты</a></ul></div>
-         <div class="col-md-3"><ul><a href="#">Выгрузка данных</a></ul></div>
-        </div>
-        </div>
-        </div>
-        
-        <a href="#">Помощь</a><a href="#">Контакты</a>
-        
-  </div>
-  <div class="nav1ChangeOrg">
-<span class="nav1ChangeOrgLink">ЦентрИКТ (ООО Центр ИКТ КПП 772501001)<span class="glyphicon glyphicon-chevron-down"></span>
-<ul>
-<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
-<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
-<a href="#">ЦентрИКТ (ООО Центр ИКТ КПП 772501002)</a>
-</ul>
-</span><span class="linkBut subLinks1"><a href="#">Выбрать другую организацию</a></span>
+    </div>
 </div>
+<div class="nav1SubMenuHover">
+    <a href="/ShopRests" class="nav1SubItem">Торговый зал</a>
+    <div class="nav1SubMenu">
+        <div class="container">
+            <div class="col-md-3" style="width:20%"><ul><a href="/ShopRests">Торговый зал</a></ul></div>
+            <div class="col-md-3" style="width:20%"><ul><a href="/ActWriteOffShop">Акты списания продукции</a></ul>
+            </div>
+            <div class="col-md-3" style="width:20%"><ul><a href="/ActChargeOnShop">Акты постановки на баланс</a></ul>
+            </div>
+            <div class="col-md-3" style="width:20%"><ul><a href="/ActTransferToStock">Акты перемещения продукции</a></ul>
+            </div>
+            <div class="col-md-3" style="width:20%"><ul><a href="/Inventory">Инвентаризация</a></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav1SubMenuHover">
+    <a href="/IncomingWayBill/Index/All" class="nav1SubItem">Накладные</a>
+    <div class="nav1SubMenu">
+        <div class="container">
+            <div class="col-md-6">
+                <ul>
+                    <a href="/IncomingWayBill/Index/All">Входящие товаро-транспортные накладные</a>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <a href="/OutgoingWayBill/Index/All">Исходящие товаро-транспортные накладные</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="/Declaration/Simple">Декларации</a>    <div class="nav1SubMenuHover">
+        <a href="/Reports" class="nav1SubItem"> Отчеты и выгрузка</a>
+        <div class="nav1SubMenu">
+            <div class="container">
+                <div class="col-md-7"></div>
+                <div class="col-md-2"><ul><a href="/Reports?mode=Reports">Отчеты</a> </ul> </div>
+                <div class="col-md-3"><ul><a href="/Reports?mode=Exports">Выгрузка данных</a></ul></div>
+            </div>
+        </div>
+    </div>
+<a href="/Utm">Управление</a>
+
+        
+
+                    <div class="nav1ChangeOrg">
+                <span class="nav1ChangeOrgLink">ООО Центр ИКТ, КПП 772501001<span class="glyphicon glyphicon-chevron-down"></span>
+                <ul>
+                    <a href="/Organisation/ClearCurrentOrganisation">Выйти из организации</a>
+                </ul>
+                </span><span class="linkBut subLinks1"><a href="/Subdivision/ChooseSubdivision">Выбрать другое подразделение <span class="glyphicon glyphicon-share"></span></a></span>
+
+            </div>
+    </div>
+  
 </div>
   
 </header>
