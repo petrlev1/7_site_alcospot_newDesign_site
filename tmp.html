@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Untitled Document</title>
+
+<link href="http://centrikt.ru:51003/Content/Site3.css?7" rel="stylesheet" type="text/css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
+
+<script type='text/javascript' src='js/jquery.floatThead.min.js'></script>
+
+<script>
+$(document).ready(function () {
+
+        var docHeight = $(window).height();
+        var footerHeight = $('footer').height();
+        var footerTop = $('footer').position().top + footerHeight;
+
+        if (footerTop < docHeight) {
+            $('footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+        }
+    });
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="headRowUp">
+<div class="container">
+<div class="col-md-4 colLogo">
+  <div class="logo"><a href="#"><img src="css/Images/logo.svg"></a><span class="version">v‌2.7.11</span></div>
+  </div>
+  <div class="col-md-8 headLine"><div class="headTel">8 (499) 653-61-43</div>
+    <div class="headProblemBut"><a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span>Сообщить о проблеме</a></div>
+    <div class="headLogin">Вы вошли как: Test User</div></div>
+    </div>
+    </div>
+<div class="container">
+
+<div class="col-md-9">
+
+      <div class="nav1" id="mainmenu">
+
+
+<a href="/Home/Operator">Главная</a>
+
+
+    <div class="nav1SubMenuHover">
+        <a href="/Home/Operator" class="nav1SubItem">Административные функции</a>
+        <div class="nav1SubMenu">
+           
+                <a href="/User">Пользователи</a>
+                <a href="/Organisation">Организации</a>
+                <a href="/RetailNetwork">Торговые сети</a>
+            
+        </div>
+    </div>
+
+<div class="nav1SubMenuHover">
+    <a href="/StockRests" class="nav1SubItem">Склад</a>
+    <div class="nav1SubMenu">
+            <a href="/StockRests">Склад</a>
+            <a href="/ActWriteOffStock">Акты списания продукции</a>
+            <a href="/ActChargeOnStock">Акты постановки на баланс</a>
+            <a href="/ActTransferToShop">Акты перемещения продукции</a>
+    </div>
+    </div>
+    
+    <div class="nav1SubMenuHover">
+    <a href="/ShopRests" class="nav1SubItem">Торговый зал</a>
+    <div class="nav1SubMenu">
+       
+            <a href="/ShopRests">Торговый зал</a>
+            <a href="/ActWriteOffShop">Акты списания продукции</a>
+            <a href="/ActChargeOnShop">Акты постановки на баланс</a>
+            <a href="/ActTransferToStock">Акты перемещения продукции</a>
+            <a href="/Inventory">Инвентаризация</a>
+            
+            </div>
+    </div>
+
+<div class="nav1SubMenuHover">
+    <a href="/IncomingWayBill/Index/All" class="nav1SubItem">Накладные</a>
+    <div class="nav1SubMenu">
+        
+            <a href="/IncomingWayBill/Index/All">Входящие товаро-транспортные накладные</a>
+            <a href="/OutgoingWayBill/Index/All">Исходящие товаро-транспортные накладные</a>
+        
+    </div>
+</div>
+
+<a href="/Declaration/Simple">Декларации</a>    <div class="nav1SubMenuHover">
+        <a href="/Reports" class="nav1SubItem"> Отчеты и выгрузка</a>
+        <div class="nav1SubMenu">
+            
+                <a href="/Reports?mode=Reports">Отчеты</a>
+                <a href="/Reports?mode=Exports">Выгрузка данных</a>
+            
+        </div>
+    </div>
+<a href="/Utm">Управление</a>
+    
+</div>
+
+</div>
+
+<div class="col-md-3">
+            
+           <div class="nav1ChangeOrg">
+                <span class="nav1ChangeOrgLink"><nobr>ООО Центр ИКТ, КПП 772501001<span class="glyphicon glyphicon-chevron-down"></span></nobr>
+                <ul>
+                    <a href="/Organisation/ClearCurrentOrganisation">Выбрать другое подразделение</a>
+                    <a href="/Organisation/ClearCurrentOrganisation">Выйти из организации</a>
+                </ul>
+                </span>
+            </div>
+            
+</div>
+                  
+    </div>
+  
+</div>
+  
+</header>
+<div class="bodyBack">
+  <div class="container">
+    <div class="breadcrumb2"><a href="#">Главная</a>/<a href="#">Торговый зал</a>/<a href="#">Товарно-транспортные накладные</a></div>
+    
+    <div class="col-md-8"><h1>Входящие товарно-транспортные накладные</h1></div>
+    <div class="col-md-4" style="text-align:right"><div class="expUserItem"><a href="#"><span class="glyphicon glyphicon-wrench"></span>Режим опытного пользователя</a></div></div>
+    <div class="col-md-12 descText">Товарно-транспортная накладная (ТТН) предназначена для учёта движения товарно-материальных ценностей (ТМЦ) при их перемещении с участием транспортных средств и является основанием для списания ТМЦ у грузоотправителя и оприходования их у грузополучателя. Как правило, оформляется грузоотправителем. Однако по согласованию сторон документ может составляться и перевозчиком.<br>
+Некоторые организации используют ТТН для списания/оприходования товарно-материальных ценностей (вместо товарной накладной ТОРГ-12).</div>
+  </div>
+  
+    <div class="toolPanel1">
+    <div class="container">
+      <div class="col-md-8">
+        <div class="subLinks1 linkBut"><a href="#" class="active">Все</a><a href="#">Новые</a><a href="#">Ожидающие подтверждения</a><a href="#">Принятые</a><a href="#">Отклоненные</a></div>
+      </div>
+      <div class="col-md-4">
+      <div class="subLinks1 linkBut"><a href="#" class="active">Входящие</a><a href="#">Исходящие</a></div>
+      </div>
+    </div>
+    </div>
+    
+  <div class="toolPanel2">
+    <div class="container">
+    <div class="subLinks1 linkBut">
+     <div class="col-md-4">
+      <div class="subBlock1"><strong>Действия:</strong><a href="#">Отправить в ТЗ</a><a href="#" class="delItem"><span class="glyphicon glyphicon-remove"></span>Удалить</a></div>
+      </div>
+      <div class="col-md-8">
+      <div class="subBlock1"><strong>Сменить статус:</strong><a href="#">Новая</a><a href="#">Принятая полностью</a><a href="#">Отклоненная полностью</a></div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="container">
+    
+    <br>
+
+<div class="table1">
+    
+    <table id="wayBillTable" class="table table-striped">
+                <thead>
+                <tr>
+                <th>Название организации</th>
+                <th>ИНН</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td class="DropDownBlock">
+                <label>
+                <input name="" type="checkbox" value="" class="DropDownBlockCheck">
+                <div class="DropDownBlockLink">Общество с ограниченной ответственностью "МАРШАЛ"</div>
+                
+                <div class="DropDownBlockCont">
+                123<br>123
+                </div>
+                </label>
+
+                </td>
+                <td>7737550016</td>
+                </tr>
+                
+                <tr>
+                <td class="DropDownBlock">
+                <label>
+                <input name="" type="checkbox" value="" class="DropDownBlockCheck">
+                <div class="DropDownBlockLink">Общество с ограниченной ответственностью Ника Плюс</div>
+                
+                <div class="DropDownBlockCont">
+                <div class="table2">
+                <ul class="table2Head">
+                  <li>Адрес</li>
+                  <li>КПП</li>
+                  <li></li>
+                  </ul>
+                <ul>
+                  <li><a href="#" onClick="selectSubdivision('7737550016', '772401001'); return false;">г. Москва, ул. Маршала Захарова, д. 6 корпус 1</a></li>
+                  <li>772401001</li>
+                  <li><a href="#" class="btn btn-sm btn-default" onClick="selectSubdivision('7737550016', '772401001'); return false;">Выбрать</a></li>
+                  </ul>
+                  <ul>
+                  <li><a href="#" onClick="selectSubdivision('7737550016', '772401001'); return false;">г. Москва, ул. Маршала Захарова, д. 6 корпус 1</a></li>
+                  <li>772401001</li>
+                  <li><a href="#" class="btn btn-sm btn-default" onClick="selectSubdivision('7737550016', '772401001'); return false;">Выбрать</a></li>
+                  </ul>
+                  <ul>
+                  <li><a href="#" onClick="selectSubdivision('7737550016', '772401001'); return false;">г. Москва, ул. Маршала Захарова, д. 6 корпус 1</a></li>
+                  <li>772401001</li>
+                  <li><a href="#" class="btn btn-sm btn-default" onClick="selectSubdivision('7737550016', '772401001'); return false;">Выбрать</a></li>
+                  </ul>
+                </div>
+                </div>
+                </label>
+
+                </td>
+                <td>7737550016</td>
+                </tr>
+  
+                </tbody>
+                </table>
+    
+    </div>
+
+    <br>
+    
+    <div class="table1">
+                    <table class="table" id="orgTable">
+                        <thead>
+                            <tr>
+                                <th>Название организации</th>
+                                <th>ИНН</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                    <tr>
+                                        <td class="DropDownBlock">
+                                        <label>
+                                            <div class="wrapper">
+                                                <input name="" type="checkbox" class="DropDownBlockCheck"/>
+                                                <div class="DropDownBlockLink" id="org_7737550016" onClick="selectOrg(this, event, '7737550016')">Общество с ограниченной ответственностью &quot;МАРШАЛ&quot;</div>
+                                                <div class="DropDownBlockCont">
+                                                
+                                                123<br>123
+                                                
+                                                </div>
+
+
+                                                
+                                            </div>
+                                            </label>
+                                        </td>
+                                        <td>7737550016</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="DropDownBlock">
+                                            <div class="wrapper">
+                                                <input name="" type="checkbox" class="DropDownBlockCheck"/>
+                                                <div class="DropDownBlockLink" id="org_7709860986" onClick="selectOrg(this, event, '7709860986')">Общество с ограниченной ответственностью &quot;Пчелка+&quot;</div>
+                                                <div class="DropDownBlockCont"></div>
+
+
+                                                
+                                            </div>
+                                        </td>
+                                        <td>7709860986</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="DropDownBlock">
+                                            <div class="wrapper">
+                                                <input name="" type="checkbox" class="DropDownBlockCheck"/>
+                                                <div class="DropDownBlockLink" id="org_5003043280" onClick="selectOrg(this, event, '5003043280')">Общество с ограниченной ответственностью Ника Плюс</div>
+                                                <div class="DropDownBlockCont"></div>
+
+
+                                                
+                                            </div>
+                                        </td>
+                                        <td>5003043280</td>
+                                    </tr>
+                                
+                                    
+                                   
+                        </tbody>
+                    </table>
+                </div>
+    
+<br>
+
+  </div>
+  
+  <div class="footer2">
+       <div class="container">
+       <div class="col-sm-6">
+        <div class="footTel footTelPosF2">8 (499) 653-61-43</div><a href="#" class="butCallBack butCallBackPosF2">Обратный звонок</a>
+        </div>
+        <div class="col-sm-6">
+        <a href="#" class="footIcF2 footIcVideo">Видеоинструкция</a>
+        <a href="#" class="footIcF2 footIcHelp">Помощь</a>
+        <a href="#" class="footIcF2 footIcCont">Контакты</a>
+        </div>
+       </div>
+       </div>
+  
+  <footer>
+        
+        <div class="footerTop">
+        <div class="container">
+        
+        <div class="col-md-3">
+        <div><div class="footTel footTelPos">8 (499) 653-61-43</div></div>
+        <a href="#" class="butCallBack butCallBackPos">Обратный звонок</a>
+        </div>
+        
+        <div class="col-md-3">
+        <a href="#" class="footIc footIcVideo">Видеоинструкция</a>
+        <a href="#" class="footIc footIcHelp">Помощь и поддержка</a>
+        <a href="#" class="footIc footIcCont">Контакты</a>
+        </div>
+        
+        <div class="footItems col-md-3">
+        <a href="#">Главная</a>
+        <a href="#">Пользователи</a>
+        <a href="#">Организации</a>
+        <a href="#">Торговые сети</a>
+        <a href="#">Декларации</a>
+        </div>
+        
+        <div class="footItems col-md-3">
+        <a href="#">Склад</a>
+        <a href="#">Торговый зал</a>
+        <a href="#">Накладные</a>
+        <a href="#">Отчёты и выгрузка</a>
+        <a href="#">Управление</a>
+        </div>
+        
+        
+        
+        
+        
+        <br><br>
+
+        </div>
+        </div>
+             
+        <div class="footerBottom">
+        <div class="container">
+        <p>&copy; 2017 - ООО "Центр информационно-коммуникационных технологий" (ООО Центр ИКТ)</p>
+        </div>
+        </div>
+        
+        </footer>
+                
+        </div>
+        
+        
+       <script type="text/javascript">
+		
+	$(".sticky-header").floatThead({scrollingTop:500});
+
+</script>
+           
+
+</body>
+</html>

@@ -17,6 +17,32 @@ a {
     color: #6EC9EF;
     text-decoration: none; }
 
+h1 {
+  font-size: 2em;
+  color: #0774B5;
+  margin: 30px 0 20px 0;
+  padding: 0;
+  line-height: 40px; }
+
+h2 {
+  font-size: 1.5em;
+  color: #0774B5;
+  margin: 8px 0 8px 0;
+  padding: 0;
+  line-height: 30px; }
+
+.textStyle1 {
+  line-height: 25px;
+  font-size: 16px; }
+  .textStyle1 ul {
+    margin: 0; }
+  .textStyle1 li {
+    list-style: inside;
+    list-style-type: decimal;
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 20px; }
+
 header {
   border-bottom: 1px #c0ddf0 solid; }
 
@@ -143,12 +169,6 @@ header {
 .nav1SubMenu .container {
   padding: 20px; }
 
-h1 {
-  font-size: 2em;
-  color: #0774B5;
-  margin: 30px 0 20px 0;
-  padding: 0; }
-
 .descText {
   margin: 0 0 20px 0; }
 
@@ -228,7 +248,7 @@ h1 {
   border-top-right-radius: 5px;
   border-collapse: collapse;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #ffffff;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); }
 .table1 thead {
   color: #fff;
@@ -247,6 +267,9 @@ h1 {
   border-bottom: 1px #c1dcec solid;
   padding: 10px 15px !important;
   vertical-align: middle !important; }
+
+.table1AlignUp td {
+  vertical-align: top !important; }
 
 .tablesorter-header-inner:after {
   content: "\25bd";
@@ -301,6 +324,11 @@ h1 {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
 
+.TableIcon1 {
+  display: block;
+  font-size: 28px;
+  text-align: center; }
+
 .table1ButDel {
   width: 35px;
   height: 35px;
@@ -331,6 +359,69 @@ h1 {
     width: 300px;
     transition: width ease-out 0.2s; }
 
+.table2 {
+  display: table;
+  background-color: #fff;
+  cursor: default;
+  font-size: 12px; }
+  .table2 ul {
+    display: table-row;
+    border-bottom: 1px #F2F2F2 solid; }
+    .table2 ul:hover {
+      background-color: #fafafa; }
+  .table2 li {
+    display: table-cell;
+    padding: 8px 15px;
+    font-size: 12px; }
+
+.table2Head {
+  color: #fff;
+  background-color: #0774B5; }
+  .table2Head:hover {
+    background-color: #0774B5 !important; }
+
+.DropDownBlock label {
+  display: block;
+  font-weight: 100;
+  cursor: pointer; }
+
+.DropDownBlockCheck {
+  display: none; }
+
+.DropDownBlockLink {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #0774B5;
+  padding: 5px 10px 2px 22px;
+  border-bottom: 1px #75C4EA dashed; }
+
+.DropDownBlockLink:before {
+  content: "+ ";
+  position: absolute;
+  margin: -5px 0 0 -22px;
+  font-size: 21px;
+  font-weight: 100;
+  color: #75C4EA; }
+
+.DropDownBlockCheck:checked ~ .DropDownBlockCont {
+  max-height: 1000px;
+  position: relative;
+  transition: all ease-out 1s; }
+
+.DropDownBlockCheck:checked + .DropDownBlockLink {
+  font-weight: bold;
+  border-bottom: none; }
+
+.DropDownBlockCheck:checked + .DropDownBlockLink:before {
+  content: "- "; }
+
+.DropDownBlockCont {
+  display: block;
+  margin: 20px 0 0 0;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute; }
+
 .status1, .statSuccess, .statError, .statBlue {
   display: block;
   width: 100%;
@@ -357,6 +448,79 @@ h1 {
 .pagination li {
   display: inline-block;
   font-size: 1.3em; }
+
+.indBlock, .indBlock2 {
+  background-color: #F7F7F7;
+  margin: 25px 0;
+  font-size: 14px;
+  box-shadow: 0 0 30px rgba(26, 76, 91, 0.4);
+  border-radius: 20px;
+  overflow: hidden; }
+  .indBlock ul, .indBlock2 ul {
+    display: block; }
+  .indBlock li, .indBlock2 li {
+    display: block;
+    border-bottom: 1px #e7e7e7 solid;
+    padding: 15px 0; }
+
+.indBlockHead, .indBlock2Head {
+  color: #ffffff;
+  font-size: 21px;
+  padding: 20px 35px;
+  background-color: #0774B5;
+  background-image: url(Images/NewFront/indBlockHead.png);
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.indBlockBody {
+  padding: 20px 35px; }
+
+.indBlockError {
+  border: 2px #DE351F solid; }
+  .indBlockError .indBlockHead, .indBlockError .indBlock2Head {
+    background-color: #DE351F; }
+
+.errorColor {
+  color: #DE351F; }
+
+.butBlock1 {
+  margin: 8px 0 0 0; }
+  .butBlock1 button {
+    margin: 5px 0; }
+
+.servicesStat {
+  color: #008C0E; }
+  .servicesStat span {
+    margin: 0 10px 0 0; }
+
+.indBlocCompany strong {
+  color: #0774B5; }
+
+.indBlockChangeOrg {
+  float: right; }
+
+.indBlockRight {
+  padding: 0 10px 0 50px; }
+
+.indBlock2 div {
+  border-bottom: 1px #e7e7e7 solid;
+  padding: 20px; }
+  .indBlock2 div a {
+    display: block;
+    font-size: 23px;
+    padding: 8px 0; }
+
+.indBlock2 {
+  font-size: 12px; }
+  .indBlock2 ul {
+    margin: 0;
+    padding: 0; }
+  .indBlock2 li {
+    padding: 8px 0; }
+
+.indBlock2Head {
+  font-size: 18px;
+  padding: 10px 25px !important; }
 
 footer {
   position: relative;
@@ -436,6 +600,7 @@ footer {
 
 .footTel {
   display: inline-block;
+  font-size: 21px;
   color: #ffffff;
   white-space: nowrap;
   margin: 0;
@@ -477,6 +642,28 @@ footer {
   color: #fff;
   padding: 18px 10px 10px 10px;
   background-color: #065F94; }
+
+.form-group {
+  border-bottom: 1px #dcf0fa solid;
+  padding: 15px 0;
+  margin-bottom: 0; }
+
+.form-control {
+  padding: 0 10px; }
+
+.control-label {
+  font-weight: bold;
+  font-size: 13px; }
+
+.space-top {
+  margin-top: 15px; }
+
+.privAgr {
+  display: block;
+  color: #6EC9EF;
+  margin: 5px 0 6px 0; }
+  .privAgr:hover {
+    color: #ffffff; }
 
 @media (min-width: 1600px) {
   .container {

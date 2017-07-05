@@ -2,12 +2,19 @@
 * {margin:0; padding:0}
 body { font-family:Verdana, Geneva, sans-serif; color: #4D4D4D; overflow-x: hidden; }
 
-
-
 	a { color: #2185C5; text-decoration:none; transition: all ease-out 0.3s;
         &:visited {color: #2185C5;}
         &:hover { color: #6EC9EF; text-decoration:none; }
 	  }
+
+h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; line-height: 40px; }
+h2 { font-size: 1.5em; color: #0774B5; margin: 8px 0 8px 0; padding: 0; line-height: 30px; }
+
+.textStyle1 { line-height: 25px; font-size: 16px;
+ul { margin: 0; }
+li { list-style: inside; list-style-type: decimal; margin: 15px 0; font-size: 14px; line-height: 20px; }
+}
+
 header {
 	border-bottom: 1px #c0ddf0 solid;
 }
@@ -60,7 +67,6 @@ header {
 
 .nav1SubMenu .container { padding: 20px; }
 
-h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
 
 .descText { margin: 0 0 20px 0 }
 
@@ -103,12 +109,14 @@ h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
 .active { color: #ffffff !important; background-color: #0774B5 !important }
 
 .table1 { 
-    table { font-size: 13px; width: 100%; border-width: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; border-collapse: collapse; overflow: hidden; background-color: rgba(255,255,255,.6); box-shadow: 0 3px 20px rgba(0,0,0,0.2); }
+    table { font-size: 13px; width: 100%; border-width: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; border-collapse: collapse; overflow: hidden; background-color: #ffffff; box-shadow: 0 3px 20px rgba(0,0,0,0.2); }
     thead { color: #fff; background-color: #0774B5; border-collapse: separate; }
     tbody tr:hover {background-color: #F2F2F2;}
     th { color: #edf8fd; font-weight: 100; border-bottom: 1px solid #c1dcec !important; vertical-align: middle !important; padding: 10px 15px !important; }
     td { position: relative; border-bottom: 1px #c1dcec solid; padding: 10px 15px !important; vertical-align: middle !important; }
 }
+
+.table1AlignUp td {vertical-align: top !important;}
 
 .tablesorter-header-inner {
                &:after { content: "\25bd"; font-size: 12px; padding: 0 0 0 4px;}
@@ -133,6 +141,8 @@ h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
 .table1But { display: inline-block; font-size: 28px; padding: 8px; background-repeat: no-repeat; background-position: center; background-size: contain; border-radius: 5px; text-align: center; vertical-align: middle;
     &:hover { background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.2); }}
 
+.TableIcon1 { display: block; font-size: 28px; text-align: center}
+
 .table1ButDel { @extend .table1But; width: 35px; height: 35px; background-image: url(Images/ButDel.svg); }
 .table1ButList { @extend .table1But; width: 35px; height: 35px; background-image: url(Images/ButList.svg); }
 
@@ -142,6 +152,30 @@ h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
 .gtdNumInput { position: relative; width: 40px; height: 35px; top: 0; bottom: 0; margin: auto; padding: 6px;
     &:focus { position: absolute; right: 0; width: 300px; transition: width ease-out 0.2s; }
 }
+
+
+.table2 { display: table; background-color: #fff; cursor: default; font-size: 12px;
+    ul { display: table-row; border-bottom: 1px #F2F2F2 solid;
+        &:hover {background-color: #fafafa; }
+        }
+    li {display: table-cell; padding: 8px 15px; font-size: 12px; }}
+
+.table2Head { color: #fff; background-color: #0774B5;
+       &:hover {background-color: #0774B5 !important; } }
+
+
+.DropDownBlock label { display: block; font-weight: 100; cursor: pointer; }
+
+.DropDownBlockCheck { display: none }
+
+.DropDownBlockLink { display: inline-block; font-size: 1.2em; color: #0774B5; padding: 5px 10px 2px 22px; border-bottom: 1px #75C4EA dashed; }
+.DropDownBlockLink:before { content: "+ "; position: absolute; margin: -5px 0 0 -22px; font-size: 21px; font-weight: 100; color: #75C4EA; }
+
+.DropDownBlockCheck:checked ~ .DropDownBlockCont { max-height: 1000px; position: relative; transition: all ease-out 1s; }
+.DropDownBlockCheck:checked + .DropDownBlockLink { font-weight: bold; border-bottom: none; }
+.DropDownBlockCheck:checked + .DropDownBlockLink:before { content: "- " }
+
+.DropDownBlockCont { display: block; margin: 20px 0 0 0; max-height: 0; overflow: hidden; position: absolute }
 
 
 
@@ -155,6 +189,55 @@ h1 { font-size: 2em; color: #0774B5; margin: 30px 0 20px 0; padding: 0; }
 .pagination {
     li { display: inline-block; font-size: 1.3em; }
 }
+
+
+
+
+
+.indBlock { background-color: #F7F7F7; margin: 25px 0; font-size: 14px; box-shadow: 0 0 30px rgba(26,76,91,0.4); border-radius: 20px; overflow: hidden;
+    ul { display: block }
+    li { display: block; border-bottom: 1px #e7e7e7 solid; padding: 15px 0; }
+}
+
+.indBlockHead { color: #ffffff; font-size: 21px; padding: 20px 35px; background-color: #0774B5; background-image: url(Images/NewFront/indBlockHead.png); background-repeat: no-repeat; background-position: right; }
+.indBlockBody { padding: 20px 35px; }
+
+.indBlockError { border: 2px #DE351F solid;
+    .indBlockHead { background-color: #DE351F; }
+}
+
+.errorColor { color: #DE351F }
+
+.butBlock1 { margin: 8px 0 0 0;
+    button { margin: 5px 0 }
+}
+
+.servicesStat { color: #008C0E;
+    span { margin: 0 10px 0 0 }}
+
+.indBlocCompany {
+    strong { color: #0774B5; }
+}
+
+.indBlockChangeOrg { float: right }
+
+.indBlockRight { padding: 0 10px 0 50px; }
+
+
+.indBlock2 {
+    div {border-bottom: 1px #e7e7e7 solid; padding: 20px;
+        a { display: block; font-size: 23px; padding: 8px 0 }}
+}
+
+
+.indBlock2 { @extend .indBlock; font-size: 12px;
+    ul { margin: 0; padding: 0 }
+    li { padding: 8px 0; }
+}
+
+.indBlock2Head { @extend .indBlockHead; font-size: 18px; padding: 10px 25px !important; }
+
+
 
 
 
@@ -231,6 +314,7 @@ footer {
 
 .footTel {
   display: inline-block;
+    font-size: 21px;
   color: #ffffff;
   white-space: nowrap;
   margin: 0;
@@ -271,6 +355,26 @@ footer {
   color: #fff;
   padding: 18px 10px 10px 10px;
   background-color: #065F94; }
+
+
+.form-group {
+    border-bottom: 1px #dcf0fa solid;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+.form-control { padding: 0 10px; }
+
+.control-label {
+    font-weight: bold; font-size: 13px;
+}
+
+.space-top {
+    margin-top: 15px;
+}
+
+.privAgr { display: block; color: #6EC9EF; margin: 5px 0 6px 0;
+    &:hover { color: #ffffff; }}
 
 
 
