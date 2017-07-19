@@ -140,7 +140,44 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
     <div class="breadcrumb2"><a href="#">Главная</a>/<a href="#">Торговый зал</a>/<a href="#">Товарно-транспортные накладные</a></div>
     
     <div class="col-md-8"><h1>Входящие товарно-транспортные накладные</h1></div>
-    <div class="col-md-4" style="text-align:right"><div class="expUserItem"><a href="#"><span class="glyphicon glyphicon-wrench"></span>Режим опытного пользователя</a></div></div>
+    <div class="col-md-4" style="text-align:center">
+    
+     <script>
+     $(function(){
+    var s = $(".expUserItemBlock");
+       $(":checkbox", s).change(function() {
+                  s.toggleClass("expUserItemBlock2", this.checked);
+      });});
+  </script>
+    
+    <div class="expUserItem2">
+    <label>
+    <div class="expUserItemBlock"><input name="" type="checkbox" value="" class="expUserItem2Check"><div class="expUserItemBlockCirc"></div><span class="expUserItemIcon1"></span><span class="expUserItemIcon2 glyphicon glyphicon-wrench"></span>
+    <span class="expUserItem2text1">Обычный режим</span><span class="expUserItem2text2">Опытный пользователь</span>
+    </div>
+    </label>
+    </div>
+    
+    <br><br>
+    
+    <script>
+     $(function(){
+    var s = $(".expUserItem3Block");
+       $(":checkbox", s).change(function() {
+                  s.toggleClass("expUserItem3Block2", this.checked);
+      });});
+  </script>
+    
+    <div class="expUserItem3">
+    <label>
+    <div class="expUserItem3Block"><input name="" type="checkbox" value="" class="expUserItem3Check"><div class="expUserItemBlock3Circ"></div><span class="expUserItemIcon1"></span><span class="expUserItem3Icon1 glyphicon glyphicon-wrench"></span>
+    <span class="expUserItem3text1">Обычный режим</span><span class="expUserItem3text2">Опытный пользователь</span>
+    </div>
+    </label>
+    </div>
+
+    </div>
+    
     <div class="col-md-12 descText">Товарно-транспортная накладная (ТТН) предназначена для учёта движения товарно-материальных ценностей (ТМЦ) при их перемещении с участием транспортных средств и является основанием для списания ТМЦ у грузоотправителя и оприходования их у грузополучателя. Как правило, оформляется грузоотправителем. Однако по согласованию сторон документ может составляться и перевозчиком.<br>
 Некоторые организации используют ТТН для списания/оприходования товарно-материальных ценностей (вместо товарной накладной ТОРГ-12).</div>
   </div>

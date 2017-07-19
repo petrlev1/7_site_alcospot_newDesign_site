@@ -172,23 +172,184 @@ header {
 .descText {
   margin: 0 0 20px 0; }
 
-.expUserItem {
-  display: inline-block;
-  margin: 0 0 10px 0; }
-  .expUserItem a {
-    display: inline-block;
-    border: 1px #75C4EA solid;
-    padding: 5px 10px;
-    border-radius: 5px; }
-  .expUserItem span {
-    display: inline-block;
-    padding: 0 5px 0 0; }
-
 .breadcrumb2 {
   margin-left: -10px; }
   .breadcrumb2 a {
     display: inline-block;
     padding: 25px 10px 0 10px; }
+
+.expUserItem2 {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 30px;
+  text-align: left; }
+
+.expUserItem2Check {
+  display: none; }
+
+.expUserItem2Check:checked + .expUserItemBlockCirc {
+  left: 31px; }
+
+.expUserItem2Check:checked ~ .expUserItemIcon1 {
+  opacity: 0.5; }
+
+.expUserItem2Check:checked ~ .expUserItemIcon2 {
+  opacity: 1; }
+
+.expUserItem2Check:checked ~ .expUserItem2text2 {
+  right: -89px;
+  opacity: 1; }
+
+.expUserItem2Check:checked ~ .expUserItem2text1 {
+  right: -200px;
+  opacity: 0; }
+
+.expUserItemBlock, .expUserItemBlock2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: #5cb85c;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+  .expUserItemBlock:hover .expUserItemBlockCirc, .expUserItemBlock2:hover .expUserItemBlockCirc {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.expUserItemBlock2 {
+  background-color: #d9534f; }
+
+.expUserItemBlockCirc {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 1px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px #ffffff solid;
+  border-radius: 15px;
+  transition: all 0.2s ease-in;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.expUserItemIcon, .expUserItemIcon1, .expUserItemIcon2 {
+  position: absolute;
+  top: 7px;
+  font-size: 14px;
+  color: #ffffff;
+  transition: all 0.2s ease-in; }
+
+.expUserItemIcon1 {
+  left: 8px; }
+
+.expUserItemIcon2 {
+  right: 8px;
+  opacity: 0.5; }
+
+.expUserItem2text, .expUserItem2text1, .expUserItem2text2 {
+  position: absolute;
+  display: block;
+  font-size: 11px;
+  font-weight: 100;
+  text-align: left;
+  width: 80px;
+  text-align: left;
+  line-height: 13px;
+  margin: 0 0 0 69px;
+  transition: all 0.2s ease-in; }
+
+.expUserItem2text1 {
+  right: -89px; }
+
+.expUserItem2text2 {
+  right: -200px;
+  font-weight: bold;
+  opacity: 0; }
+
+.expUserItem3 {
+  display: inline-block;
+  width: 188px;
+  height: 30px;
+  text-align: left; }
+
+.expUserItem3Check {
+  display: none; }
+
+.expUserItem3Check:checked + .expUserItemBlock3Circ {
+  left: 171px; }
+
+.expUserItem3Check:checked ~ .expUserItemIcon1 {
+  opacity: 0.5; }
+
+.expUserItem3Check:checked ~ .expUserItem3text1 {
+  left: 300px;
+  opacity: 0; }
+
+.expUserItem3Check:checked ~ .expUserItem3text2 {
+  left: 17px;
+  opacity: 1; }
+
+.expUserItem3Check:checked ~ .expUserItem3Icon1 {
+  opacity: 1; }
+
+.expUserItem3Block, .expUserItem3Block2 {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  background-color: #5cb85c;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  overflow: hidden; }
+  .expUserItem3Block:hover .expUserItemBlock3Circ, .expUserItem3Block2:hover .expUserItemBlock3Circ {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+
+.expUserItem3Icon, .expUserItem3Icon1 {
+  position: absolute;
+  top: 7px;
+  font-size: 14px;
+  color: #ffffff;
+  transition: all 0.2s ease-in; }
+
+.expUserItem3Icon1 {
+  right: 8px;
+  opacity: .5; }
+
+.expUserItem3Block2 {
+  background-color: #ce3d39; }
+
+.expUserItemBlock3Circ {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 1px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px #ffffff solid;
+  border-radius: 15px;
+  transition: all 0.2s ease-in;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.expUserItem3text, .expUserItem3text1, .expUserItem3text2 {
+  position: absolute;
+  display: block;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 13px;
+  margin: 8px 0;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+  pointer-events: none; }
+
+.expUserItem3text1 {
+  left: 50px; }
+
+.expUserItem3text2 {
+  left: -300px;
+  opacity: 0; }
 
 .bodyBack {
   background: url(Images/bodyBack.jpg) top center repeat-x; }
