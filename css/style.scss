@@ -38,7 +38,7 @@ header {
 }
 
 .nav1 { margin: 15px 0 10px 0;
-	a { display: inline-block; position: relative; font-size: 1.2em; padding: 15px 15px; border-top-left-radius: 10px; border-top-right-radius: 10px;
+	a { display: inline-block; position: relative; font-size: 1.2em; padding: 15px 15px; border-radius: 10px;
         &:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.2); background: linear-gradient(#ffffff, #f4f4f4); }} 
 	}
 
@@ -58,6 +58,7 @@ header {
 .nav1SubMenuHover { display: inline-block;
       &:hover .nav1SubMenu { max-height: 1000px; transition: all ease-out 0.5s; padding: 0 0 15px 0 }
       &:hover .nav1SubItem { background: linear-gradient(#ffffff, #f4f4f4); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+    a { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 }
 
 .nav1SubItem { display: inline-block; padding-right: 30px !important;
@@ -202,11 +203,14 @@ header {
 
 .DropDownBlockCheck { display: none }
 
-.DropDownBlockLink { display: inline-block; font-size: 1.2em; color: #0774B5; padding: 5px 10px 2px 22px; border-bottom: 1px #75C4EA dashed; }
-.DropDownBlockLink:before { content: "+ "; position: absolute; margin: -5px 0 0 -22px; font-size: 21px; font-weight: 100; color: #75C4EA; }
+.DropDownBlockLink { display: inline-block; font-size: 1.2em; color: #0774B5; padding: 5px 10px 2px 25px; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: rgba(7,116,181, .7); }
+
+.DropDownBlockLink:before { content: "+ "; position: absolute; margin: -6px 0 0 -24px; font-size: 21px; font-weight: 100; color: #75C4EA; }
 
 .DropDownBlockCheck:checked ~ .DropDownBlockCont { max-height: 1000px; position: relative; transition: all ease-out 1s; }
-.DropDownBlockCheck:checked + .DropDownBlockLink { font-weight: bold; border-bottom: none; }
+
+.DropDownBlockCheck:checked + .DropDownBlockLink { font-weight: bold; text-decoration: none; }
+
 .DropDownBlockCheck:checked + .DropDownBlockLink:before { content: "- " }
 
 .DropDownBlockCont { display: block; margin: 20px 0 0 0; max-height: 0; overflow: hidden; position: absolute }
